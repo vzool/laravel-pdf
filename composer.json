@@ -4,8 +4,8 @@
     "keywords": ["mpdf", "pdf", "laravel"],
     "license": "MIT",
     "require": {
-        "php": ">=5.4.0",
-        "mpdf/mpdf": "^6.1.3"
+        "php": "^8.0",
+        "mpdf/mpdf": "^8.0"
     },
     "autoload": {
         "psr-4": {"vzool\\LaravelPdf\\": "src/LaravelPdf"}
