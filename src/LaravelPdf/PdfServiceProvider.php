@@ -5,8 +5,6 @@ namespace vzool\LaravelPdf;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-include base_path('vendor/mpdf/mpdf/src/Mpdf.php ');
-
 class PdfServiceProvider extends BaseServiceProvider {
 
 	/**
@@ -32,7 +30,7 @@ class PdfServiceProvider extends BaseServiceProvider {
 				define(_MPDF_SYSTEM_TTFONTS_CONFIG, __DIR__ . '/../mpdf_ttfonts_config.php');
 			}
 
-			$mpdf = new \mPDF(
+			$mpdf = new \Mpdf\Mpdf(
 				Config::get('pdf.mode'),              // mode - default ''
 				Config::get('pdf.format'),            // format - A4, for example, default ''
 				Config::get('pdf.default_font_size'), // font size - default 0
